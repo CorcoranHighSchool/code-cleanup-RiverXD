@@ -5,7 +5,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float speed = 3.0f;
     private Rigidbody enemyRb;
     private GameObject player;
-    private string const player = "Player";
+    private const string player = "Player";
     // Start is called before the first frame update
     void Start()
     {
