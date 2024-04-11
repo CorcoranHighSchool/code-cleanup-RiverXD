@@ -29,7 +29,7 @@ public class Target : MonoBehaviour
         //Spawn Position
         Vector3 spawnPosition = RandomSpawnPos();
         transform.position = spawnPosition;
-        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        gameManager = GameObject.Find(gamemanager).GetComponent<GameManager>();
     }
     private float RandomTorque()
     {
@@ -58,7 +58,7 @@ public class Target : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Destroy(gameObject);
-        if (!gameObject.CompareTag("Bad"))
+        if (!gameObject.CompareTag(bad))
         {
             GameObject.FindObjectOfType<GameManager>().GameOver();
         }
